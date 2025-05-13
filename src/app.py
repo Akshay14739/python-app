@@ -8,7 +8,8 @@ app = Flask(__name__)
 def hello():
     return jsonify({
         'name': 'Flask App',
-        'Time': datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+        'Time': datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y"),
+        'Deployed_to': 'Kubernetes'
     })
 
 @app.route('/api/v1/healthz')
@@ -25,4 +26,3 @@ if __name__ == '__main__':
     app.run(host="0.0.0.0")
 # '/api/v1/details'
 # '/api/v1/healthz'
-#
